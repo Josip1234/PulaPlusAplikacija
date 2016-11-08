@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PulaPlusAplikacija</string>
+    <string-array name="menu">
+        <item>Događaj</item>
+        <item>Trgovine</item>
+        <item>Znamenitosti</item>
+        <item>Međuustanove</item>
+        <item>Restoran</item>
+        <item>Hotel</item>
+    </string-array>
+    <string name="label_loading">Punjenje...</string>
+    <string name="action_settings">Settings</string>
+    <string name="let_s_discouver_pula">Let\'s discouver Pula</string>
+</resources>
