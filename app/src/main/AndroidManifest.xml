@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListaActivity" />
-        <activity android:name=".BookingActivity"></activity>
+        <activity android:name=".BookingActivity" />
+        <activity android:name=".JSONActivity"></activity>
     </application>
 
 </manifest>
