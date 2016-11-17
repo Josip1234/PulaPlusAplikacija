@@ -37,7 +37,10 @@ public class LstFragment extends ListFragment {
     public void onListItemClick(ListView l, View view, int position, long id){
         ViewGroup viewGroup=(ViewGroup)view;
         TextView txt=(TextView)viewGroup.findViewById(R.id.txtitem);
-
+        if(position==0){
+            Intent i = new Intent(getActivity(), TrgovineActivity.class);
+            getActivity().startActivity(i);
+        }
         if(position==5){
             Intent i = new Intent(getActivity(), BookingActivity.class);
             getActivity().startActivity(i);
