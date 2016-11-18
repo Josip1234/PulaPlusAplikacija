@@ -110,9 +110,11 @@ public class TrgovineActivity extends Activity {
                     JSONObject jsonChildNode = jsonMainNode.getJSONObject(i);
 
                     String naziv = jsonChildNode.optString("naziv");
+                    String kontakt = jsonChildNode.optString("kontakt");
 
                     String adresa = jsonChildNode.optString("adresa");
-                    String outPut = naziv +adresa;
+
+                    String outPut = naziv +adresa +kontakt;
                     trgovinaList.add(createTrgovina("trgovine", outPut));
                 }
             } catch (JSONException e) {
