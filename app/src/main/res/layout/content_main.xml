@@ -17,13 +17,16 @@
         android:text="@string/let_s_discouver_pula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="154dp"
         android:onClick="sendMessage"
         android:id="@+id/ulaz"
-        android:background="#ebfbe922"
         style="@style/Widget.AppCompat.ActionButton"
+        android:elevation="0dp"
+        android:backgroundTint="@color/geek_green"
+        android:background="@mipmap/button_back1"
+        android:layout_marginBottom="59dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:elevation="0dp" />
+        android:textSize="5sp"
+        android:textStyle="normal|bold" />
 
 </RelativeLayout>

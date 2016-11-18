@@ -8,6 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.josip.acer.pulaplusaplikacija.ListaActivity">
+    tools:context="com.josip.acer.pulaplusaplikacija.ListaActivity"
+    android:animationCache="true"
+    android:background="@mipmap/pula1">
 
 </RelativeLayout>
