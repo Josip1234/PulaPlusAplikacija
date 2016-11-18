@@ -20,8 +20,8 @@
         android:layout_marginBottom="154dp"
         android:onClick="sendMessage"
         android:id="@+id/ulaz"
-        android:background="@color/geek_green"
-        style="@style/Base.Theme.AppCompat.Light.Dialog.FixedSize"
+        android:background="#ebfbe922"
+        style="@style/Widget.AppCompat.ActionButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:elevation="0dp" />
