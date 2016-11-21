@@ -41,6 +41,10 @@ public class LstFragment extends ListFragment {
             Intent i = new Intent(getActivity(), TrgovineActivity.class);
             getActivity().startActivity(i);
         }
+        if(position==1){
+            Intent i = new Intent(getActivity(),DogadjajActivity.class);
+            getActivity().startActivity(i);
+        }
         if(position==5){
             Intent i = new Intent(getActivity(), BookingActivity.class);
             getActivity().startActivity(i);
