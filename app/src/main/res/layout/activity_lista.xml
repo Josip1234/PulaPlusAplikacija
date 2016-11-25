@@ -10,6 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.josip.acer.pulaplusaplikacija.ListaActivity"
     android:animationCache="true"
-    android:background="@drawable/pula2">
+    android:background="@mipmap/pula1">
 
 </RelativeLayout>

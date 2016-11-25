@@ -11,8 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.josip.acer.pulaplusaplikacija.MainActivity"
-    tools:showIn="@layout/activity_main"
-    android:background="@drawable/pula2">
+    tools:showIn="@layout/activity_main">
 
     <Button
         android:text="@string/let_s_discouver_pula"
@@ -22,10 +21,12 @@
         android:id="@+id/ulaz"
         style="@style/Widget.AppCompat.ActionButton"
         android:elevation="0dp"
-        android:backgroundTint="@android:color/holo_blue_light"
+        android:backgroundTint="@color/geek_green"
+        android:background="@mipmap/button_back1"
         android:layout_marginBottom="59dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textColor="@android:color/black" />
+        android:textSize="5sp"
+        android:textStyle="normal|bold" />
 
 </RelativeLayout>
