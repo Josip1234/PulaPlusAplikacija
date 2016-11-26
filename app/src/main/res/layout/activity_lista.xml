@@ -9,7 +9,61 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.josip.acer.pulaplusaplikacija.ListaActivity"
-    android:animationCache="true"
-    android:background="@mipmap/pula1">
+    android:animationCache="true">
 
+    <Button
+        android:text="@string/hotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b3"
+
+        android:onClick="Booking"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/b2"
+        android:layout_marginBottom="56dp" />
+
+    <Button
+        android:text="@string/trgovine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b1"
+        android:layout_alignBottom="@+id/b3"
+        android:layout_alignStart="@+id/b3"
+        android:layout_marginBottom="53dp" />
+
+    <Button
+        android:text="@string/bolnica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b6"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/b1" />
+
+    <Button
+        android:text="@string/restoran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b4"
+        android:layout_below="@+id/b2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:id="@+id/b2"
+        android:text="@string/dogadaj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Dogadaj"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/b4"
+        android:layout_marginTop="21dp" />
+
+    <Button
+        android:text="@string/znamenitost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b5"
+        android:layout_alignBaseline="@+id/b1"
+        android:layout_alignBottom="@+id/b1"
+        android:layout_toStartOf="@+id/b1" />
 </RelativeLayout>
