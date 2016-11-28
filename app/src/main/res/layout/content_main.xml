@@ -14,19 +14,19 @@
     tools:showIn="@layout/activity_main">
 
     <Button
-        android:text="@string/let_s_discouver_pula"
+        android:text="Let's discover Pula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="sendMessage"
         android:id="@+id/ulaz"
         style="@style/Widget.AppCompat.ActionButton"
-        android:elevation="0dp"
-        android:backgroundTint="@color/geek_green"
-        android:background="@mipmap/button_back1"
-        android:layout_marginBottom="59dp"
+        android:elevation="10dp"
+        android:backgroundTint="#fff533"
+        android:background="@drawable/toast_actionsheet_single_normal"
+        android:layout_marginBottom="90dp"
+        android:textSize="10sp"
+        android:textStyle="normal|bold"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="5sp"
-        android:textStyle="normal|bold" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

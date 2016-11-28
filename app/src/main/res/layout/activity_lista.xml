@@ -12,58 +12,63 @@
     android:animationCache="true">
 
     <Button
-        android:text="@string/hotel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/b3"
 
         android:onClick="Booking"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/b2"
-        android:layout_marginBottom="56dp" />
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:id="@+id/b3"
+        android:background="@mipmap/hotel1"
+        android:layout_alignTop="@+id/b1"
+        android:layout_alignStart="@+id/b4" />
 
     <Button
-        android:text="@string/trgovine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/b1"
-        android:layout_alignBottom="@+id/b3"
-        android:layout_alignStart="@+id/b3"
-        android:layout_marginBottom="53dp" />
-
-    <Button
-        android:text="@string/bolnica"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/b6"
+        android:id="@+id/b2"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:onClick="Dogadaj"
+        android:background="@mipmap/dog1"
         android:layout_centerVertical="true"
         android:layout_alignStart="@+id/b1" />
 
     <Button
-        android:text="@string/restoran"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200px"
+        android:layout_height="200px"
         android:id="@+id/b4"
-        android:layout_below="@+id/b2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:background="@mipmap/restoran1"
+        android:layout_marginEnd="23dp"
+        android:layout_below="@+id/b1"
+        android:layout_alignParentEnd="true" />
 
     <Button
-        android:id="@+id/b2"
-        android:text="@string/dogadaj"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="Dogadaj"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/b4"
-        android:layout_marginTop="21dp" />
 
-    <Button
-        android:text="@string/znamenitost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/b5"
-        android:layout_alignBaseline="@+id/b1"
-        android:layout_alignBottom="@+id/b1"
-        android:layout_toStartOf="@+id/b1" />
+        android:layout_width="200px"
+        android:layout_height="200px"
+
+        android:background="@mipmap/museum1"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/b2"
+        android:layout_alignStart="@+id/b2" />
+
+    <Button
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:id="@+id/b1"
+        android:background="@mipmap/shop1"
+        android:layout_marginBottom="35dp"
+        android:layout_above="@+id/b2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="31dp" />
+
+    <Button
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:id="@+id/b6"
+
+        android:background="@mipmap/hospital1"
+
+
+        android:layout_alignBottom="@+id/b5"
+        android:layout_alignStart="@+id/b4" />
+
 </RelativeLayout>

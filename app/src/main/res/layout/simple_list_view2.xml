@@ -6,8 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".DogadjajActivity"
-    android:background="@mipmap/pula1">
+    tools:context=".DogadjajActivity">
 
     <TextView
         android:id="@+id/textView2"
