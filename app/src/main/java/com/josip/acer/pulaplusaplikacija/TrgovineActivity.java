@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -30,13 +31,13 @@ public class TrgovineActivity extends Activity {
 
         private String jsonResult;
     private String url = "http://pulaplus.esy.es/jsonfetch.php";
-    private ListView listView;
+    private GridView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trgovine);
-        listView = (ListView) findViewById(R.id.listView2);
+        listView = (GridView) findViewById(R.id.listView2);
         accessWebService();
     }
 
