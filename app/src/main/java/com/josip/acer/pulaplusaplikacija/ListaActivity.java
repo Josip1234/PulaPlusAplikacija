@@ -40,6 +40,14 @@ private Button b6;
             }
         });
 
+        b5=(Button) findViewById(R.id.b5);
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Znamenitosti();
+            }
+        });
+
 
     }
 public void Trgovine(){
@@ -54,4 +62,9 @@ public void Booking(){
         Intent a = new Intent(this,BookingActivity.class);
         startActivity(a);
         }
+    public void Znamenitosti(){
+        Intent u = new Intent(this,ZnamenitostiActivity.class);
+        startActivity(u);
+    }
+
 }

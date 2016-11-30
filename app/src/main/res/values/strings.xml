@@ -10,4 +10,6 @@
     <string name="bolnica">Bolnica</string>
     <string name="restoran">Restoran</string>
     <string name="hotel">Hotel</string>
+    <string name="button">Napravi file</string>
+    <string name="button2">Pročitaj file</string>
 </resources>

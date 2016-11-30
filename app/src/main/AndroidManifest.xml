@@ -25,6 +25,7 @@
         <activity android:name=".BookingActivity" />
         <activity android:name=".TrgovineActivity" />
         <activity android:name=".DogadjajActivity" />
+        <activity android:name=".ZnamenitostiActivity"/>
         <activity android:name=".bolnica" />
     </application>
 
