@@ -101,20 +101,24 @@ public class DogadjajActivity extends Activity {
     public void ListDrwaer() {
         List<Map<String, String>> dogadjajList = new ArrayList<Map<String, String>>();
 
+
         try {
             JSONObject jsonResponse = new JSONObject(jsonResult);
             JSONArray jsonMainNode = jsonResponse.optJSONArray("dog");
 
+
             for (int i = 0; i < jsonMainNode.length(); i++) {
                 JSONObject jsonChildNode = jsonMainNode.getJSONObject(i);
 
+
                 String naziv = jsonChildNode.optString("naziv");
-                String adresa = jsonChildNode.optString("adresa");
+                String adresa= jsonChildNode.optString("adresa");
+                String vrijeme_odrzavanja=jsonChildNode.optString("vrijeme_odrzavanja");
 
-                String vrijeme_odrzavanja = jsonChildNode.optString("vrijeme_odrzavanja");
+                String outPut = naziv+adresa+vrijeme_odrzavanja;
 
-                String outPut = naziv +adresa + vrijeme_odrzavanja;
                 dogadjajList.add(createDogadjaj("dog", outPut));
+
             }
         } catch (JSONException e) {
             Toast.makeText(getApplicationContext(), "Error" + e.toString(),
@@ -124,6 +128,7 @@ public class DogadjajActivity extends Activity {
         SimpleAdapter simpleAdapter = new SimpleAdapter(this, dogadjajList,
                 android.R.layout.simple_list_item_2,
                 new String[] { "dog" }, new int[] { android.R.id.text2 });
+
         listView.setAdapter(simpleAdapter);
     }
 
@@ -132,4 +137,5 @@ public class DogadjajActivity extends Activity {
         dogadjaj.put(naziv,adresa);
         return dogadjaj;
     }
+
 }
