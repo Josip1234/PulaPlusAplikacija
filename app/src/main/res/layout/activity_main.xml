@@ -5,11 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.josip.acer.pulaplusaplikacija.MainActivity"
-    android:background="@drawable/plus"
+
 
     android:fitsSystemWindows="true"
     android:layout_centerHorizontal="false"
-    android:focusableInTouchMode="false">
+    android:focusableInTouchMode="false"
+    android:background="@android:color/background_dark"
+    android:foreground="@drawable/v"
+    android:foregroundGravity="top|center">
 
     <include layout="@layout/content_main"
         android:layout_width="match_parent"

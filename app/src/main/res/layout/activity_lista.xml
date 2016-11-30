@@ -19,46 +19,8 @@
         android:id="@+id/b3"
         android:background="@mipmap/hotel1"
         android:layout_alignTop="@+id/b1"
-        android:layout_alignStart="@+id/b4" />
-
-    <Button
-        android:id="@+id/b2"
-        android:layout_width="200px"
-        android:layout_height="200px"
-        android:onClick="Dogadaj"
-        android:background="@mipmap/dog1"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/b1" />
-
-    <Button
-        android:layout_width="200px"
-        android:layout_height="200px"
-        android:id="@+id/b4"
-        android:background="@mipmap/restoran1"
-        android:layout_marginEnd="23dp"
-        android:layout_below="@+id/b1"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-
-        android:id="@+id/b5"
-        android:layout_width="200px"
-        android:layout_height="200px"
-
-        android:background="@mipmap/museum1"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/b2"
-        android:layout_alignStart="@+id/b2" />
-
-    <Button
-        android:layout_width="200px"
-        android:layout_height="200px"
-        android:id="@+id/b1"
-        android:background="@mipmap/shop1"
-        android:layout_marginBottom="35dp"
-        android:layout_above="@+id/b2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="31dp" />
+        android:layout_alignStart="@+id/b4"
+        tools:ignore="PxUsage" />
 
     <Button
         android:layout_width="200px"
@@ -69,6 +31,114 @@
 
 
         android:layout_alignBottom="@+id/b5"
+        android:layout_alignStart="@+id/b4"
+        tools:ignore="PxUsage" />
+
+    <TextView
+        android:text="  Smještaj   "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_alignTop="@+id/Trgovine"
+        tools:ignore="HardcodedText"
+        android:layout_alignEnd="@+id/b3"
+        android:layout_alignStart="@+id/b3" />
+
+    <TextView
+        android:text="   Bolnica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:layout_above="@+id/b6"
+        android:layout_marginBottom="19dp"
+        tools:ignore="HardcodedText"
+        android:layout_alignEnd="@+id/b6"
+        android:layout_alignStart="@+id/b6"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:text="Znamenitosti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_alignBaseline="@+id/textView7"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignStart="@+id/b5"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:id="@+id/b4"
+        android:background="@mipmap/restoran1"
+        android:layout_marginEnd="34dp"
+
+        android:layout_alignTop="@+id/b2"
+        android:layout_alignParentEnd="true"
+        tools:ignore="PxUsage" />
+
+    <TextView
+        android:text=" Restorani"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/b4"
+        android:layout_marginBottom="18dp"
+        tools:ignore="HardcodedText"
+        android:layout_alignEnd="@+id/b4"
         android:layout_alignStart="@+id/b4" />
+
+    <TextView
+        android:text="Trgovine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Trgovine"
+        tools:ignore="HardcodedText"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/b1" />
+
+    <TextView
+        android:text="  Događaji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        tools:ignore="HardcodedText"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignEnd="@+id/Trgovine" />
+
+    <Button
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:id="@+id/b1"
+        android:background="@mipmap/shop1"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="11dp"
+        tools:ignore="PxUsage"
+        android:layout_below="@+id/Trgovine"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:onClick="Dogadaj"
+        android:background="@mipmap/dog1"
+        tools:ignore="PxUsage"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/b1"
+        android:layout_alignStart="@+id/b1" />
+
+    <Button
+
+        android:id="@+id/b5"
+        android:layout_width="200px"
+        android:layout_height="200px"
+
+        android:background="@mipmap/museum1"
+        tools:ignore="PxUsage"
+        android:layout_below="@+id/b2"
+        android:layout_alignStart="@+id/b2"
+        android:layout_marginTop="65dp" />
 
 </RelativeLayout>
