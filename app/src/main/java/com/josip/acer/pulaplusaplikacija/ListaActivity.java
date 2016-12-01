@@ -48,6 +48,13 @@ private Button b6;
             }
         });
 
+        b6=(Button) findViewById(R.id.b6);
+        b6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bolnica();
+            }
+        });
 
     }
 public void Trgovine(){
@@ -65,6 +72,10 @@ public void Booking(){
     public void Znamenitosti(){
         Intent u = new Intent(this,ZnamenitostiActivity.class);
         startActivity(u);
+    }
+    public void Bolnica(){
+        Intent bolnica = new Intent(this,bolnica.class);
+        startActivity(bolnica);
     }
 
 }
