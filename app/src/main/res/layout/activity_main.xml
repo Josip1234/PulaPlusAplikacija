@@ -12,7 +12,9 @@
     android:focusableInTouchMode="false"
     android:background="@android:color/background_dark"
     android:foreground="@drawable/v"
-    android:foregroundGravity="top|center">
+    android:foregroundGravity="top|center"
+    android:translationX="0dp"
+    android:paddingTop="200px">
 
     <include layout="@layout/content_main"
         android:layout_width="match_parent"

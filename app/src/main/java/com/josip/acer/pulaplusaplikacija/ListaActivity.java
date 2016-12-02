@@ -39,7 +39,6 @@ private Button b6;
                 Booking();
             }
         });
-
         b5=(Button) findViewById(R.id.b5);
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +48,29 @@ private Button b6;
         });
 
 
+        b4=(Button) findViewById(R.id.b4);
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Restoran();
+            }
+        });
+
+        b6=(Button) findViewById(R.id.b6);
+        b6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bolnica();
+            }
+        });
     }
-public void Trgovine(){
+
+    public void Bolnica() {
+        Intent i = new Intent(this, bolnica.class);
+        startActivity(i);
+    }
+
+    public void Trgovine(){
     Intent i = new Intent(this,TrgovineActivity.class);
     startActivity(i);
 }
@@ -66,5 +86,8 @@ public void Booking(){
         Intent u = new Intent(this,ZnamenitostiActivity.class);
         startActivity(u);
     }
-
+    public void Restoran(){
+        Intent u = new Intent(this,restorani.class);
+        startActivity(u);
+    }
 }
