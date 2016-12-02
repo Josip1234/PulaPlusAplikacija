@@ -87,7 +87,7 @@ public void Booking(){
         startActivity(u);
     }
     public void Restoran(){
-        Intent u = new Intent(this,restorani.class);
-        startActivity(u);
+        Intent restoran = new Intent(this,RestoranActivity.class);
+        startActivity(restoran);
     }
 }
