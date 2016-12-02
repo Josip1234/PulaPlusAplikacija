@@ -1,62 +1,48 @@
 package com.josip.acer.pulaplusaplikacija;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v4.app.FragmentActivity;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+public class bolnica extends FragmentActivity implements OnMapReadyCallback {
 
-public class bolnica extends AppCompatActivity {
+    private GoogleMap map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bolnica);
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
-    public void createFileBolnica(View v) throws IOException,JSONException {
-        JSONArray data = new JSONArray();
-        JSONObject bol;
-
-        bol = new JSONObject();
-        bol.put("Bolnica:","Opća bolnica Pula");
-        bol.put("Adresa:","Zagrebacka 30");
-        bol.put("Telefon:","052-376-000");
-        data.put(bol);
 
 
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        map = googleMap;
 
-        String text=data.toString();
-        FileOutputStream fos=openFileOutput("bolnice",MODE_PRIVATE);
-        fos.write(text.getBytes());
-        fos.close();
-        UIHelper.displayText(this, R.id.tx1,"Datoteka je zapisana na disk:\n"+data.toString());
+        // Add a marker in Sydney and move the camera
+        LatLng pula = new LatLng(44.868056, 13.852942);
+        map.addMarker(new MarkerOptions().position(pula).title("OPĆA BOLNICA PULA, HRVATSKA"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(pula));
     }
-    public void readFileBolnica(View v) throws IOException,JSONException{
-        FileInputStream fis = openFileInput("bolnice");
-        BufferedInputStream bis = new BufferedInputStream(fis);
-        StringBuffer b = new StringBuffer();
-        while(bis.available()!=0){
-            char c= (char) bis.read();
-            b.append(c);
-        }
-        bis.close();
-        fis.close();
-        JSONArray data= new JSONArray(b.toString());
-        StringBuffer znamenitostBuffer = new StringBuffer();
-        for(int i=0;i<data.length();i++){
-            String bolnica = data.getJSONObject(i).getString("Bolnica:");
-            String adresa = data.getJSONObject(i).getString("Adresa:");
-            String telefon = data.getJSONObject(i).getString("Telefon:");
-            znamenitostBuffer.append(bolnica + "\n" + adresa);
-        }
-        UIHelper.displayText(this,R.id.tx1,znamenitostBuffer.toString());
 
-    }
+
 }
