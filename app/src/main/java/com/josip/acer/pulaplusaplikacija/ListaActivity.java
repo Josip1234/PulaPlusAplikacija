@@ -40,6 +40,13 @@ private Button b6;
             }
         });
 
+        b4 = (Button) findViewById(R.id.b4);
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Restorani();
+            }
+        });
         b5=(Button) findViewById(R.id.b5);
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +62,7 @@ private Button b6;
                 Bolnica();
             }
         });
+
 
     }
 public void Trgovine(){
@@ -76,6 +84,10 @@ public void Booking(){
     public void Bolnica(){
         Intent bolnica = new Intent(this,bolnica.class);
         startActivity(bolnica);
+    }
+    public void Restorani(){
+        Intent restoran = new Intent(this,RestoranActivity.class);
+        startActivity(restoran);
     }
 
 }
