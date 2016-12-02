@@ -1,11 +1,19 @@
 package com.josip.acer.pulaplusaplikacija;
 
 import android.app.Activity;
+import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.widget.SimpleCursorAdapter;
+import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
@@ -27,17 +35,20 @@ import java.util.List;
 import java.util.Map;
 
 public class RestoranActivity extends Activity {
+
     private String jsonResult;
-    private String url = "http://pulaplus.esy.es/dogjson.php";
+    private String url = "http://pulaplus.esy.es/restjson.php";
     private ListView listView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dogadjaj);
-        listView = (ListView) findViewById(R.id.listView3);
+        setContentView(R.layout.activity_restoran);
+        listView = (ListView) findViewById(R.id.listView5);
         accessWebService();
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -91,51 +102,49 @@ public class RestoranActivity extends Activity {
     }// end async task
 
     public void accessWebService() {
-        RestoranActivity.JsonReadTask task = new RestoranActivity.JsonReadTask();
+        JsonReadTask task = new JsonReadTask();
         // passes values for the urls string array
         task.execute(new String[] { url });
     }
 
     // build hash set for list view
     public void ListDrwaer() {
-        List<Map<String, String>> dogadjajList = new ArrayList<Map<String, String>>();
-
+        List<Map<String, String>> RestoranList = new ArrayList<Map<String, String>>();
 
         try {
             JSONObject jsonResponse = new JSONObject(jsonResult);
             JSONArray jsonMainNode = jsonResponse.optJSONArray("restorani");
 
-
             for (int i = 0; i < jsonMainNode.length(); i++) {
                 JSONObject jsonChildNode = jsonMainNode.getJSONObject(i);
 
-
                 String naziv = jsonChildNode.optString("naziv");
-                String mjesto= jsonChildNode.optString("mjesto");
-                String kontakt=jsonChildNode.optString("kontakt");
-                String mail=jsonChildNode.optString("mail");
+                String mjesto = jsonChildNode.optString("mjesto");
 
-                String outPut = naziv+mjesto+kontakt+mail;
+                String kontakt = jsonChildNode.optString("kontakt");
 
-                dogadjajList.add(createDogadjaj("restorani", outPut));
+                String outPut = naziv +kontakt +mjesto;
+                RestoranList.add(createRestoran("restorani", outPut));
+
+
+
 
             }
+
         } catch (JSONException e) {
             Toast.makeText(getApplicationContext(), "Error" + e.toString(),
                     Toast.LENGTH_SHORT).show();
         }
 
-        SimpleAdapter simpleAdapter = new SimpleAdapter(this, dogadjajList,
-                android.R.layout.simple_list_item_2,
-                new String[] { "restorani" }, new int[] { android.R.id.text2 });
-
+        SimpleAdapter simpleAdapter = new SimpleAdapter(this, RestoranList,
+                android.R.layout.simple_list_item_1,
+                new String[] { "restorani" }, new int[] { android.R.id.text1 });
         listView.setAdapter(simpleAdapter);
     }
 
-    private HashMap<String, String> createDogadjaj(String naziv, String mjesto) {
+    private HashMap<String, String> createRestoran(String naziv, String mjesto) {
         HashMap<String, String> restoran = new HashMap<String, String>();
         restoran.put(naziv,mjesto);
         return restoran;
     }
-
 }
