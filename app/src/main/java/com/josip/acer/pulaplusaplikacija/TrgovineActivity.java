@@ -115,8 +115,10 @@ private class JsonReadTask extends AsyncTask<String, Void, String> {
 
                 String adresa = jsonChildNode.optString("adresa");
 
-                String outPut = naziv +adresa +kontakt;
+                String outPut = naziv  ;
                 trgovinaList.add(createTrgovina("trgovine", outPut));
+
+
             }
         } catch (JSONException e) {
             Toast.makeText(getApplicationContext(), "Error" + e.toString(),

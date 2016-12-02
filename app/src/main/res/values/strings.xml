@@ -12,7 +12,5 @@
     <string name="hotel">Hotel</string>
     <string name="button">Napravi file</string>
     <string name="button2">Pročitaj file</string>
-    <string name="bt1">Napravi file</string>
-    <string name="br2">Pročitaj file</string>
-    <string name="t2"></string>
+    <string name="title_activity_maps2">Map</string>
 </resources>

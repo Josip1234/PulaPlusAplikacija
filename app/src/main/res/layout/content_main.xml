@@ -29,4 +29,13 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="316px"
+        android:layout_height="116px"
+        android:background="@drawable/v"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/ulaz"></LinearLayout>
+
 </RelativeLayout>
