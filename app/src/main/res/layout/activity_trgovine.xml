@@ -53,10 +53,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="596dp">
 
+
+
                     <GridView
                         android:layout_width="match_parent"
                         android:layout_height="377dp"
-                        android:id="@+id/listView2" />
+                        android:id="@+id/listView2"
+                        />
 
                 </LinearLayout>
 

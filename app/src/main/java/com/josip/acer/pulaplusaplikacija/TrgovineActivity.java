@@ -1,12 +1,19 @@
 package com.josip.acer.pulaplusaplikacija;
 
 import android.app.Activity;
+import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.widget.SimpleCursorAdapter;
+import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
@@ -32,6 +39,7 @@ public class TrgovineActivity extends Activity {
         private String jsonResult;
     private String url = "http://pulaplus.esy.es/jsonfetch.php";
     private GridView listView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,18 +123,21 @@ private class JsonReadTask extends AsyncTask<String, Void, String> {
 
                 String adresa = jsonChildNode.optString("adresa");
 
-                String outPut = naziv  ;
+                String outPut = naziv +kontakt +adresa;
                 trgovinaList.add(createTrgovina("trgovine", outPut));
 
 
+
+                
             }
+            
         } catch (JSONException e) {
             Toast.makeText(getApplicationContext(), "Error" + e.toString(),
                     Toast.LENGTH_SHORT).show();
         }
 
         SimpleAdapter simpleAdapter = new SimpleAdapter(this, trgovinaList,
-                android.R.layout.simple_list_item_1,
+                android.R.layout.two_line_list_item,
                 new String[] { "trgovine" }, new int[] { android.R.id.text1 });
         listView.setAdapter(simpleAdapter);
     }
