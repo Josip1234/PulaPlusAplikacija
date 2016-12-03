@@ -1,6 +1,8 @@
 package com.josip.acer.pulaplusaplikacija;
 
 import android.os.Bundle;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -14,11 +16,23 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class ZnamenitostiActivity extends AppCompatActivity {
-
+ViewPager viewPager;
+PagerAdapter adapter;
+int [] images;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_znamenitosti);
+
+
+        images= new int[]{
+                R.drawable.hram,
+                R.drawable.shop,
+
+        };
+        viewPager = (ViewPager) findViewById(R.id.pager);
+        adapter= new ImagePageAdapter(ZnamenitostiActivity.this,images);
+        viewPager.setAdapter(adapter);
 
     }
     public void createFile(View v) throws IOException,JSONException {

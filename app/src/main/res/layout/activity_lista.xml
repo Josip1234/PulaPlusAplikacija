@@ -137,9 +137,8 @@
 
         android:background="@mipmap/museum1"
         tools:ignore="PxUsage"
-        android:layout_marginTop="81dp"
-        android:layout_below="@+id/b2"
-        android:layout_alignStart="@+id/b2"
-        android:layout_marginStart="7dp" />
+        android:layout_alignBaseline="@+id/b3"
+        android:layout_alignBottom="@+id/b3"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
