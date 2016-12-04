@@ -17,6 +17,8 @@ public class ImagePageAdapter extends PagerAdapter {
     Context context;
     int [] images;
     LayoutInflater inflater;
+
+
     public ImagePageAdapter(Context context,int[] images)
     {
         this.context=context;
@@ -32,6 +34,7 @@ public class ImagePageAdapter extends PagerAdapter {
     }
     @Override
     public Object instantiateItem(ViewGroup container, int position){
+
         ImageView image;
         inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.pager_item,container,false);
@@ -44,4 +47,6 @@ public class ImagePageAdapter extends PagerAdapter {
     public void destroyItem(ViewGroup container, int position, Object object){
         ((ViewPager)container).removeView((RelativeLayout) object);
     }
+
+
 }

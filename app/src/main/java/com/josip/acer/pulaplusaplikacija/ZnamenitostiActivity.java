@@ -4,25 +4,21 @@ import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import android.widget.TextView;
 
 public class ZnamenitostiActivity extends AppCompatActivity {
 ViewPager viewPager;
 PagerAdapter adapter;
 int [] images;
+    String [] znamenitost={"Pulska arena","Slavoluk pobjede"};
+    String [] cijena={"150","besplatno"};
+    TextView textView;
+    int pozicija=-1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_znamenitosti);
+        textView=(TextView) findViewById(R.id.textView9);
 
 
         images= new int[]{
@@ -30,50 +26,37 @@ int [] images;
                 R.drawable.shop,
 
         };
+
+        setText(pozicija);
+
+
+    }
+    void setText(int pozicija){
+        pozicija++;
         viewPager = (ViewPager) findViewById(R.id.pager);
         adapter= new ImagePageAdapter(ZnamenitostiActivity.this,images);
+
         viewPager.setAdapter(adapter);
+        textView.setText(znamenitost[pozicija]+" "+cijena[pozicija]);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                textView.setText(znamenitost[position]+" "+cijena[position]);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
     }
-    public void createFile(View v) throws IOException,JSONException {
-        JSONArray data = new JSONArray();
-        JSONObject znam;
 
-        znam = new JSONObject();
-        znam.put("Znamenitost:","Pulska Arena");
-        znam.put("Cijena:",150);
-        data.put(znam);
 
-        znam = new JSONObject();
-        znam.put("Znamenitost:","Slavoluk pobjede");
-        znam.put("Cijena:","besplatno");
-        data.put(znam);
-
-        String text=data.toString();
-        FileOutputStream fos=openFileOutput("znamenitosti",MODE_PRIVATE);
-        fos.write(text.getBytes());
-        fos.close();
-        UIHelper.displayText(this, R.id.textView9,"Datoteka je zapisana na disk:\n"+data.toString());
-    }
-    public void readFile(View v) throws IOException,JSONException{
-        FileInputStream fis = openFileInput("znamenitosti");
-        BufferedInputStream bis = new BufferedInputStream(fis);
-        StringBuffer b = new StringBuffer();
-        while(bis.available()!=0){
-            char c= (char) bis.read();
-            b.append(c);
-        }
-        bis.close();
-        fis.close();
-        JSONArray data= new JSONArray(b.toString());
-        StringBuffer znamenitostBuffer = new StringBuffer();
-        for(int i=0;i<data.length();i++){
-            String znam = data.getJSONObject(i).getString("Znamenitost:");
-            String cijena = data.getJSONObject(i).getString("Cijena:");
-            znamenitostBuffer.append(znam + "\n" + cijena);
-        }
-        UIHelper.displayText(this,R.id.textView9,znamenitostBuffer.toString());
-
-    }
 
 }
