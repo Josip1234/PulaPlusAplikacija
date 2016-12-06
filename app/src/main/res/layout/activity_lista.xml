@@ -112,22 +112,9 @@
         android:layout_height="200px"
         android:id="@+id/b1"
         android:background="@mipmap/shop1"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="11dp"
         tools:ignore="PxUsage"
-        android:layout_below="@+id/Trgovine"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/b2"
-        android:layout_width="200px"
-        android:layout_height="200px"
-        android:onClick="Dogadaj"
-        android:background="@mipmap/dog1"
-        tools:ignore="PxUsage"
-        android:layout_marginTop="70dp"
-        android:layout_below="@+id/b1"
-        android:layout_alignStart="@+id/b1" />
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/b3" />
 
     <Button
 
@@ -137,7 +124,19 @@
 
         android:background="@mipmap/museum1"
         tools:ignore="PxUsage"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/b3" />
+        android:layout_alignBaseline="@+id/b3"
+        android:layout_alignBottom="@+id/b3"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="23dp" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:onClick="Dogadaj"
+        android:background="@mipmap/dog1"
+        tools:ignore="PxUsage"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/b5" />
 
 </RelativeLayout>

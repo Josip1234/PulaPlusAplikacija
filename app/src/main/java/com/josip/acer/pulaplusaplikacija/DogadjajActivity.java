@@ -30,11 +30,17 @@ public class DogadjajActivity extends Activity {
     private String jsonResult;
     private String url = "http://pulaplus.esy.es/dogjson.php";
     private ListView listView;
-
+    private int[] slike;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dogadjaj);
+       setContentView(R.layout.activity_dogadjaj);
+        slike = new int[]{
+                R.drawable.hram,
+                R.drawable.adresa,
+                R.drawable.clock,
+        };
+
         listView = (ListView) findViewById(R.id.listView3);
         accessWebService();
 }
@@ -114,7 +120,7 @@ public class DogadjajActivity extends Activity {
                 String adresa= jsonChildNode.optString("adresa");
                 String vrijeme_odrzavanja=jsonChildNode.optString("vrijeme_odrzavanja");
 
-                String outPut = naziv+adresa+vrijeme_odrzavanja;
+                String outPut = naziv+" "+slike[0]+"\n"+adresa+" "+slike[1]+"\n"+vrijeme_odrzavanja+" "+slike[2]+"\n";
 
                 dogadjajList.add(createDogadjaj("dog", outPut));
 
