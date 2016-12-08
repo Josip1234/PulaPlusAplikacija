@@ -124,7 +124,7 @@ public class RestoranActivity extends Activity {
                 String kontakt = jsonChildNode.optString("kontakt");
                 String mail = jsonChildNode.optString("mail");
 
-                String outPut = naziv  +mjesto +kontakt +mail ;
+                String outPut = naziv+ "\n" +mjesto+"\n"+kontakt+"\n";
                 RestoranList.add(createRestoran("restorani", outPut));
 
 

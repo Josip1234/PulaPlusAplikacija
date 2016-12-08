@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -22,9 +23,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
+
+import static com.josip.acer.pulaplusaplikacija.R.drawable.clock;
 
 public class DogadjajActivity extends Activity {
     private String jsonResult;
@@ -38,10 +44,10 @@ public class DogadjajActivity extends Activity {
         slike = new int[]{
                 R.drawable.hram,
                 R.drawable.adresa,
-                R.drawable.clock,
+                clock,
         };
 
-        listView = (ListView) findViewById(R.id.listView3);
+        listView = (ListView) findViewById(R.id.ListView3);
         accessWebService();
 }
     @Override
@@ -120,7 +126,7 @@ public class DogadjajActivity extends Activity {
                 String adresa= jsonChildNode.optString("adresa");
                 String vrijeme_odrzavanja=jsonChildNode.optString("vrijeme_odrzavanja");
 
-                String outPut = naziv+" "+slike[0]+"\n"+adresa+" "+slike[1]+"\n"+vrijeme_odrzavanja+" "+slike[2]+"\n";
+                String outPut = naziv+ "\n" +adresa+"\n"+vrijeme_odrzavanja+"\n";
 
                 dogadjajList.add(createDogadjaj("dog", outPut));
 
@@ -142,5 +148,8 @@ public class DogadjajActivity extends Activity {
         dogadjaj.put(naziv,adresa);
         return dogadjaj;
     }
+
+
+
 
 }

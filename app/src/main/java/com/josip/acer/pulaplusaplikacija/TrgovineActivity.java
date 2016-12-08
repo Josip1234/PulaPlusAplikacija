@@ -123,7 +123,7 @@ private class JsonReadTask extends AsyncTask<String, Void, String> {
 
                 String adresa = jsonChildNode.optString("adresa");
 
-                String outPut = naziv +kontakt +adresa;
+                String outPut = naziv+ "\n" +adresa+"\n"+kontakt+"\n";
                 trgovinaList.add(createTrgovina("trgovine", outPut));
 
 
