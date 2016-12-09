@@ -40,7 +40,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCQIkSJIZlbNVrKqa7N7WpLAAxoGyKoo2Y" />
 
-        <activity android:name=".RestoranActivity"></activity>
+        <activity android:name=".RestoranActivity" />
+        <activity android:name=".BusActivity"></activity>
     </application>
 
 </manifest>

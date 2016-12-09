@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import static com.josip.acer.pulaplusaplikacija.R.drawable.bus;
+
 public class ListaActivity extends AppCompatActivity {
 private Button b1;
 private Button b2;
@@ -14,6 +16,7 @@ private Button b3;
 private Button b4;
 private Button b5;
 private Button b6;
+    private Button bus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +66,14 @@ private Button b6;
                 Bolnica();
             }
         });
+
+        bus=(Button) findViewById(R.id.bus);
+        bus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BusActivity();
+            }
+        });
     }
 
     public void Bolnica() {
@@ -89,5 +100,11 @@ public void Booking(){
     public void Restoran(){
         Intent restoran = new Intent(this,RestoranActivity.class);
         startActivity(restoran);
+    }
+
+
+    public void BusActivity(){
+        Intent bus = new Intent(this,BusActivity.class);
+        startActivity(bus);
     }
 }
