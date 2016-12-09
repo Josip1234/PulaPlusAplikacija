@@ -40,8 +40,11 @@ public class bolnica extends FragmentActivity implements OnMapReadyCallback {
 
         // Add a marker in Sydney and move the camera
         LatLng pula = new LatLng(44.868056, 13.852942);
+        LatLng pula1 = new LatLng(44.859491, 13.836893);
+        map.addMarker(new MarkerOptions().position(pula1).title("Mornarička bolnica"));
         map.addMarker(new MarkerOptions().position(pula).title("OPĆA BOLNICA PULA, HRVATSKA"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(pula));
+        float zoomLevel = (float) 16.0; //This goes up to 21
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(pula, zoomLevel));
     }
 
 

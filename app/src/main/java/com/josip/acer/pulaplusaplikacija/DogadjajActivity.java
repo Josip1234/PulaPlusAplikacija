@@ -1,12 +1,19 @@
 package com.josip.acer.pulaplusaplikacija;
 
 import android.app.Activity;
+import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.widget.SimpleCursorAdapter;
+import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
@@ -23,33 +30,25 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
-
-import static com.josip.acer.pulaplusaplikacija.R.drawable.clock;
 
 public class DogadjajActivity extends Activity {
+
     private String jsonResult;
     private String url = "http://pulaplus.esy.es/dogjson.php";
     private ListView listView;
-    private int[] slike;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       setContentView(R.layout.activity_dogadjaj);
-        slike = new int[]{
-                R.drawable.hram,
-                R.drawable.adresa,
-                clock,
-        };
-
-        listView = (ListView) findViewById(R.id.ListView3);
+        setContentView(R.layout.activity_dogadjaj);
+        listView = (ListView) findViewById(R.id.listView3);
         accessWebService();
-}
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -110,46 +109,43 @@ public class DogadjajActivity extends Activity {
 
     // build hash set for list view
     public void ListDrwaer() {
-        List<Map<String, String>> dogadjajList = new ArrayList<Map<String, String>>();
-
+        List<Map<String, String>> DogadjajList = new ArrayList<Map<String, String>>();
 
         try {
             JSONObject jsonResponse = new JSONObject(jsonResult);
             JSONArray jsonMainNode = jsonResponse.optJSONArray("dog");
 
-
             for (int i = 0; i < jsonMainNode.length(); i++) {
                 JSONObject jsonChildNode = jsonMainNode.getJSONObject(i);
 
-
                 String naziv = jsonChildNode.optString("naziv");
-                String adresa= jsonChildNode.optString("adresa");
-                String vrijeme_odrzavanja=jsonChildNode.optString("vrijeme_odrzavanja");
+                String adresa = jsonChildNode.optString("adresa");
 
-                String outPut = naziv+ "\n" +adresa+"\n"+vrijeme_odrzavanja+"\n";
+                String mjesto = jsonChildNode.optString("vrijeme_odrzavanja");
 
-                dogadjajList.add(createDogadjaj("dog", outPut));
+
+                String outPut = naziv+ "\n" +adresa+"\n"+mjesto+"\n";
+                DogadjajList.add(createRestoran("dog", outPut));
+
+
+
 
             }
+
         } catch (JSONException e) {
             Toast.makeText(getApplicationContext(), "Error" + e.toString(),
                     Toast.LENGTH_SHORT).show();
         }
 
-        SimpleAdapter simpleAdapter = new SimpleAdapter(this, dogadjajList,
-                android.R.layout.simple_list_item_2,
-                new String[] { "dog" }, new int[] { android.R.id.text2 });
-
+        SimpleAdapter simpleAdapter = new SimpleAdapter(this, DogadjajList,
+                android.R.layout.simple_list_item_1,
+                new String[] { "dog" }, new int[] { android.R.id.text1 });
         listView.setAdapter(simpleAdapter);
     }
 
-    private HashMap<String, String> createDogadjaj(String naziv, String adresa) {
-        HashMap<String, String> dogadjaj = new HashMap<String, String>();
-        dogadjaj.put(naziv,adresa);
-        return dogadjaj;
+    private HashMap<String, String> createRestoran(String naziv, String adresa) {
+        HashMap<String, String> dogadjaji = new HashMap<String, String>();
+        dogadjaji.put(naziv,adresa);
+        return dogadjaji;
     }
-
-
-
-
 }
