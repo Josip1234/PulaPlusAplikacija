@@ -19,49 +19,35 @@
             android:orientation="vertical"
             android:paddingTop="24dp">
 
-            <android.support.v7.widget.CardView
+            <LinearLayout
+                style="@style/Widget.CardContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/card_margin">
+                android:weightSum="1">
 
-                <LinearLayout
-                    style="@style/Widget.CardContent"
+                <TextView
+                    android:id="@+id/quote"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="30dp"
+                    android:text="Događaji u Puli"
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText"
+                    android:layout_weight="0.86" />
 
-                    <TextView
-                        android:id="@+id/quote"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Događaji u Puli"
-                        android:textAlignment="center"
-                        tools:ignore="HardcodedText" />
+            </LinearLayout>
 
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
+            <LinearLayout
+                style="@style/Widget.CardContent"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/card_margin"
-                android:layout_marginLeft="@dimen/card_margin"
-                android:layout_marginRight="@dimen/card_margin">
+                android:layout_height="match_parent">
 
-                <LinearLayout
-                    style="@style/Widget.CardContent"
+
+                <ListView
                     android:layout_width="match_parent"
-                    android:layout_height="596dp">
-
-
-                    <ListView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/listView3" />
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
+                    android:layout_height="888dp"
+                    android:id="@+id/listView3" />
+            </LinearLayout>
 
 
         </LinearLayout>
@@ -83,13 +69,6 @@
             style="@style/SizeSpecificCollapsingToolbarLayout"
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="76dp"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                app:layout_collapseMode="pin" />
 
             <ImageView
                 android:id="@+id/backdrop"
