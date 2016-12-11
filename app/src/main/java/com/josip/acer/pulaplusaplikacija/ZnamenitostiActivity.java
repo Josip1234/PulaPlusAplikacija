@@ -12,8 +12,16 @@ PagerAdapter adapter;
 int [] images;
     String [] znamenitost={"Augustov hram","Amfiteatar u Puli","Titov park","Malo rimsko kazalište u Puli","Arheološki muzej Istre"};
     String [] cijena={"10 kn odrasli, učenici/studenti 5 kn","50 kn odrasli, učenici/studenti 25kn","besplatno","besplatno","zatvoreno zbog radova"};
+    String [] opis={
+            "Augustov hram je dobro očuvani rimski hram u centru Pule na središnjem gradskom trgu Forum. \n Hram koji je posvećen prvom rimskom caru Augustu sagrađen je za vrijeme careva života između 2. pr. Kr. i njegove smrti 14. godine nove ere.",
+            "Amfiteatar u Puli ili Pulska Arena najveći je i najsačuvaniji spomenik antičkog graditeljstva u Hrvatskoj.",
+            "Sa sjeveroistoka parka nalazi se Nimfej, na jugozapadnom kraju smještena je zgrada bivše tiskare u kojoj se danas nalazi Gradska knjižnica i čitaonica,\n dok se na jugoistočnom kraju nalazi park Petra Krešimira IV.",
+            "Malo rimsko kazalište u Puli izgrađeno je vjerojatno u 1. stoljeću na istočnoj padini pulskog brežuljka podno starog Castruma.\n Zauzimalo je znatno veći prostor od onog danas vidljivog, jer nisu do kraja završena arheološka istraživanja.",
+            "Arheološki muzej Istre je specijalni muzej osnovan 1902. godine u Puli. Prostire se na površini od 3600 m².\n Muzej sadrži tri zbirke: prapovijesnu, antičku, te kasnoantičku i srednjovjekovnu",
+    };
     TextView textView;
     TextView tv;
+    TextView o;
     int pozicija=-1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +29,7 @@ int [] images;
         setContentView(R.layout.activity_znamenitosti);
         textView=(TextView) findViewById(R.id.textView9);
         tv=(TextView) findViewById(R.id.textView11);
-
+        o=(TextView) findViewById(R.id.textView12);
         images= new int[]{
                 R.drawable.hram,
                 R.drawable.pulskaarena6,
@@ -52,6 +60,7 @@ int [] images;
             public void onPageSelected(int position) {
                 textView.setText(znamenitost[position]);
                 tv.setText(cijena[position]);
+                o.setText(opis[position]);
             }
 
             @Override
