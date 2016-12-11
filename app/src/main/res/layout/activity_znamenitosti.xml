@@ -22,6 +22,13 @@
             android:layout_height="300px"
             android:id="@+id/textView9"
             android:gravity="bottom" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11"
+            android:nestedScrollingEnabled="true" />
     </LinearLayout>
 
     <android.support.v4.view.ViewPager
@@ -29,8 +36,9 @@
 
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_marginStart="23dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginStart="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="268dp" />
 
 </RelativeLayout>

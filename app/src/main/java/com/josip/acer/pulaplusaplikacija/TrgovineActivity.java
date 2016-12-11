@@ -1,19 +1,11 @@
 package com.josip.acer.pulaplusaplikacija;
 
 import android.app.Activity;
-import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.widget.SimpleCursorAdapter;
-import android.util.Log;
 import android.view.Menu;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
