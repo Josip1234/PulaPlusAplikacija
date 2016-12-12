@@ -11,7 +11,7 @@ ViewPager viewPager;
 PagerAdapter adapter;
 int [] images;
     String [] znamenitost={"Augustov hram","Amfiteatar u Puli","Titov park","Malo rimsko kazalište u Puli","Arheološki muzej Istre"};
-    String [] cijena={"10 kn odrasli, učenici/studenti 5 kn","50 kn odrasli, učenici/studenti 25kn","besplatno","besplatno","zatvoreno zbog radova"};
+    String [] cijena={"Cijena : 10 kn odrasli, učenici/studenti 5 kn","Cijena : 50 kn odrasli, učenici/studenti 25kn","Cijena: besplatno","Cijena : besplatno","Cijena : zatvoreno zbog radova"};
     String [] opis={
             "Augustov hram je dobro očuvani rimski hram u centru Pule na središnjem gradskom trgu Forum. \n Hram koji je posvećen prvom rimskom caru Augustu sagrađen je za vrijeme careva života između 2. pr. Kr. i njegove smrti 14. godine nove ere.",
             "Amfiteatar u Puli ili Pulska Arena najveći je i najsačuvaniji spomenik antičkog graditeljstva u Hrvatskoj.",
