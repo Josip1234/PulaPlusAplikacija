@@ -1,14 +1,24 @@
 package com.josip.acer.pulaplusaplikacija;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+
 
 public class ZnamenitostiActivity extends AppCompatActivity {
 ViewPager viewPager;
 PagerAdapter adapter;
+    ImageView fashionImg;
+    private Button sendMessage;
 int [] images;
     String [] znamenitost={"Augustov hram","Amfiteatar u Puli","Titov park","Malo rimsko kazalište u Puli","Arheološki muzej Istre"};
     String [] cijena={"Cijena : 10 kn odrasli, učenici/studenti 5 kn","Cijena : 50 kn odrasli, učenici/studenti 25kn","Cijena: besplatno","Cijena : besplatno","Cijena : zatvoreno zbog radova"};
@@ -27,9 +37,30 @@ int [] images;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_znamenitosti);
-        textView=(TextView) findViewById(R.id.textView9);
+
+
+        // Locate the button in activity_main.xml
+       sendMessage= (Button) findViewById(R.id.sendMessage);
+
+        // Capture button clicks
+        sendMessage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(ZnamenitostiActivity.this,
+                        znam.class);
+                startActivity(myIntent);
+            }
+        });
+
+
+
+
+
+    textView=(TextView) findViewById(R.id.textView9);
         tv=(TextView) findViewById(R.id.textView11);
         o=(TextView) findViewById(R.id.textView12);
+
         images= new int[]{
                 R.drawable.hram,
                 R.drawable.pulskaarena6,
@@ -70,6 +101,7 @@ int [] images;
         });
 
     }
+
 
 
 

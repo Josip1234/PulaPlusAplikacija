@@ -56,16 +56,6 @@
         android:layout_below="@+id/Trgovine"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="200px"
-        android:layout_height="200px"
-        android:id="@+id/bus"
-        android:background="@drawable/bus"
-        tools:ignore="PxUsage"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/b4"
-        android:layout_marginBottom="10dp" />
-
     <TextView
         android:text="Bolnica"
         android:layout_width="wrap_content"
@@ -154,6 +144,16 @@
         android:layout_alignStart="@+id/b5"
         android:layout_alignEnd="@+id/b5" />
 
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/bus"
+        android:background="@drawable/bus"
+        tools:ignore="PxUsage"
+        android:layout_marginBottom="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
     <TextView
         android:text="Bus"
         android:layout_width="wrap_content"
@@ -161,7 +161,6 @@
         android:id="@+id/textView8"
         android:textAlignment="center"
         android:layout_above="@+id/bus"
-        android:layout_alignParentEnd="true"
-        android:layout_alignStart="@+id/bus" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

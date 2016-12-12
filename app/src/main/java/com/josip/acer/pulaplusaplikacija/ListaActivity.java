@@ -16,6 +16,8 @@ private Button b3;
 private Button b4;
 private Button b5;
 private Button b6;
+
+
     private Button bus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +76,9 @@ private Button b6;
                 BusActivity();
             }
         });
+
+
+
     }
 
     public void Bolnica() {
@@ -85,6 +90,10 @@ private Button b6;
     Intent i = new Intent(this,TrgovineActivity.class);
     startActivity(i);
 }
+
+
+
+
 public void Dogadaj(){
         Intent p= new Intent(this,DogadjajActivity.class);
         startActivity(p);
@@ -107,4 +116,7 @@ public void Booking(){
         Intent bus = new Intent(this,BusActivity.class);
         startActivity(bus);
     }
+
+
+
 }

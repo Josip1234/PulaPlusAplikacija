@@ -41,7 +41,9 @@
             android:value="AIzaSyCQIkSJIZlbNVrKqa7N7WpLAAxoGyKoo2Y" />
 
         <activity android:name=".RestoranActivity" />
-        <activity android:name=".BusActivity"></activity>
+        <activity android:name=".BusActivity" />
+        <activity android:name=".znam"></activity>
+
     </application>
 
 </manifest>
