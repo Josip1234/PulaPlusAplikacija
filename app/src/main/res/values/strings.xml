@@ -12,6 +12,7 @@
     <string name="hotel">Hotel</string>
     <string name="button">Napravi file</string>
     <string name="button2">Pročitaj file</string>
+    <string name="tv1">Za sljedecu znamenitost, povuci u desno/lijevo</string>
     <string name="title_activity_maps2">Map</string>
 
 </resources>

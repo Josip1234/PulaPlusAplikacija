@@ -11,6 +11,12 @@
     tools:context="com.josip.acer.pulaplusaplikacija.ZnamenitostiActivity">
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv1"
+        android:text="@string/tv1" />
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
