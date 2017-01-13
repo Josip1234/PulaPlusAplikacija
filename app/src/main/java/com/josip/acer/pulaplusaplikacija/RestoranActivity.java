@@ -39,14 +39,21 @@ public class RestoranActivity extends Activity {
     private String jsonResult;
     private String url = "http://pulaplus.esy.es/restjson.php";
     private ListView listView;
-
+    SQliteClass sQliteClass;
+    ArrayList<RestoraniModel> restoraniModels = new ArrayList<>();
+public com.josip.acer.pulaplusaplikacija.ListAdapter listAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restoran);
         listView = (ListView) findViewById(R.id.listView5);
-        accessWebService();
+        sQliteClass = new SQliteClass(this);
+        restoraniModels = sQliteClass.restoraniModels();
+        listAdapter = new com.josip.acer.pulaplusaplikacija.ListAdapter(this,restoraniModels);
+
+        listView.setAdapter(listAdapter);
+     //   accessWebService();
     }
 
     @Override

@@ -107,8 +107,10 @@ public void Booking(){
         startActivity(u);
     }
     public void Restoran(){
-        Intent restoran = new Intent(this,RestoranActivity.class);
-        startActivity(restoran);
+        RestoraniJSON restoraniJSON = new RestoraniJSON();
+        restoraniJSON.fetchRestorans(this);
+       // Intent restoran = new Intent(this,RestoranActivity.class);
+        //startActivity(restoran);
     }
 
 
