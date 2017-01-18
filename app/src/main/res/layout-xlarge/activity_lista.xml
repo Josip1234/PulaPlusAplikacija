@@ -46,7 +46,7 @@
         tools:ignore="PxUsage" />
 
     <TextView
-        android:text="  Smještaj   "
+        android:text="  Accommodation   "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView5"
@@ -69,7 +69,7 @@
         android:layout_alignStart="@+id/b1" />
 
     <TextView
-        android:text="Bus"
+        android:text="Bus stations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
@@ -113,7 +113,7 @@
         android:layout_alignStart="@+id/b1" />
 
     <TextView
-        android:text="Događaji"
+        android:text="Events"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
@@ -124,7 +124,7 @@
         android:layout_alignEnd="@+id/b5" />
 
     <TextView
-        android:text="Trgovine"
+        android:text="Shops"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Trgovine"
@@ -137,7 +137,7 @@
         android:layout_alignStart="@+id/b1" />
 
     <TextView
-        android:text="Bolnica"
+        android:text="Hospital"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/b6"
@@ -148,7 +148,7 @@
         android:textAlignment="center" />
 
     <TextView
-        android:text="Znamenitosti"
+        android:text="Sights"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView6"
@@ -160,7 +160,7 @@
         android:layout_alignStart="@+id/b5" />
 
     <TextView
-        android:text="Restorani"
+        android:text="Restaurants"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView"

@@ -34,7 +34,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Restorani u Puli"
+                        android:text="Restaurants in Pula"
                         android:textAlignment="center"
                         tools:ignore="HardcodedText" />
 

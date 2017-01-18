@@ -2,7 +2,6 @@ package com.josip.acer.pulaplusaplikacija;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -41,7 +40,7 @@ public class RestoraniJSON {
                     for(int i = 0;i<jsonArray1.length();i++) {
                     try{
                          JSONObject jsonObject = jsonArray1.getJSONObject(i);
-                        address = jsonObject.getString("mjesto");
+                        address = jsonObject.getString("naziv");
                         contact =  jsonObject.getString("kontakt");
                         sQliteClass.addRestoran(contact, address);
 

@@ -1,6 +1,5 @@
 package com.josip.acer.pulaplusaplikacija;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -8,7 +7,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,14 +18,14 @@ PagerAdapter adapter;
     ImageView fashionImg;
     private Button sendMessage;
 int [] images;
-    String [] znamenitost={"Augustov hram","Amfiteatar u Puli","Titov park","Malo rimsko kazalište u Puli","Arheološki muzej Istre"};
-    String [] cijena={"Cijena : 10 kn odrasli, učenici/studenti 5 kn","Cijena : 50 kn odrasli, učenici/studenti 25kn","Cijena: besplatno","Cijena : besplatno","Cijena : zatvoreno zbog radova"};
+    String [] znamenitost={"The temple of Augustus","\n" + "Amphitheater in Pula","Tito 's  park","Little Rome Theatre in Pula","Archeologic Museum Istre"};
+    String [] cijena={"Price : 10 kn adults, students 5 kn","Price : 50 kn adults, students 25kn","Price: free","Price : free","Price : closed because of construction works"};
     String [] opis={
-            "Augustov hram je dobro očuvani rimski hram u centru Pule na središnjem gradskom trgu Forum. \n Hram koji je posvećen prvom rimskom caru Augustu sagrađen je za vrijeme careva života između 2. pr. Kr. i njegove smrti 14. godine nove ere.",
-            "Amfiteatar u Puli ili Pulska Arena najveći je i najsačuvaniji spomenik antičkog graditeljstva u Hrvatskoj.",
-            "Sa sjeveroistoka parka nalazi se Nimfej, na jugozapadnom kraju smještena je zgrada bivše tiskare u kojoj se danas nalazi Gradska knjižnica i čitaonica,\n dok se na jugoistočnom kraju nalazi park Petra Krešimira IV.",
-            "Malo rimsko kazalište u Puli izgrađeno je vjerojatno u 1. stoljeću na istočnoj padini pulskog brežuljka podno starog Castruma.\n Zauzimalo je znatno veći prostor od onog danas vidljivog, jer nisu do kraja završena arheološka istraživanja.",
-            "Arheološki muzej Istre je specijalni muzej osnovan 1902. godine u Puli. Prostire se na površini od 3600 m².\n Muzej sadrži tri zbirke: prapovijesnu, antičku, te kasnoantičku i srednjovjekovnu",
+            "\n" + "The Temple of Augustus is well-preserved Roman temple in the center of Pula in the main square Forum.\n +The temple dedicated to the first Roman Emperor Augustus was built during the emperor's life between 2 pr. Cr. and his death in 14 AD.",
+            "\n" + "The amphitheater in Pula or Pula Arena is the largest and best preserved monument of ancient architecture in Croatia.",
+            "\n" + "On the northeast of the park is Nimfej, located on the southwestern end of the building of the former printing house where it is today City Library,\n +  while at the southeast end of the park Petar Kresimir IV.",
+            "\n" + "Little Roman Theatre, built probably in the 1st century on the eastern slope of the hill at the foot of the Pula old Castrum.\n Occupied a much larger area than today visible, because they are not completed by the end of archaeological research.",
+            "The Archaeological Museum is a special museum was established in 1902 in Pula. It covers an area of 3600 m².\n The museum contains three collections: the prehistoric, ancient and late antique and medieval",
     };
     TextView textView;
     TextView tv;

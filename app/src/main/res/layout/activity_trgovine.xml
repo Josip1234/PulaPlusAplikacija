@@ -34,7 +34,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Trgovine u Puli"
+                        android:text="Shops in Pula"
                         android:textAlignment="center" />
 
                 </LinearLayout>
