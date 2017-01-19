@@ -30,7 +30,7 @@ int [] images;
     TextView textView;
     TextView tv;
     TextView o;
-    int pozicija=0;
+    int pozicija=-1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
