@@ -94,7 +94,7 @@
         android:layout_width="200px"
         android:layout_height="200px"
         android:id="@+id/bus"
-        android:background="@drawable/bus"
+        android:background="@drawable/bus2"
         tools:ignore="PxUsage"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/textView8"
