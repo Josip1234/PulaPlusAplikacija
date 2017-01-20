@@ -1,15 +1,18 @@
 <resources>
     <string name="app_name">PulaPlusAplikacija</string>
-    <string-array name="menu">
-        <item>Događaj</item>
-        <item>Trgovine</item>
-        <item>Znamenitosti</item>
-        <item>Međuustanove</item>
-        <item>Restoran</item>
-        <item>Hotel</item>
-    </string-array>
-    <string name="label_loading">Punjenje...</string>
+    <string name="label_loading">Loading...</string>
     <string name="action_settings">Settings</string>
     <string name="let_s_discouver_pula">Let\'s discouver Pula</string>
     <string name="textview">TextView</string>
+    <string name="trgovine">Shops</string>
+    <string name="dogadaj">Events</string>
+    <string name="znamenitost">Sights</string>
+    <string name="bolnica">Hospital</string>
+    <string name="restoran">Restaurant</string>
+    <string name="hotel">Hotel</string>
+    <string name="button">Make file</string>
+    <string name="button2">Read file</string>
+    <string name="tv1">For next sight, pull left or right</string>
+    <string name="title_activity_maps2">Map</string>
+
 </resources>

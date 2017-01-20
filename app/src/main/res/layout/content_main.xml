@@ -14,16 +14,26 @@
     tools:showIn="@layout/activity_main">
 
     <Button
-        android:text="@string/let_s_discouver_pula"
+        android:text="Let's discover Pula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="154dp"
         android:onClick="sendMessage"
         android:id="@+id/ulaz"
-        android:background="@color/geek_green"
-        style="@style/Base.Theme.AppCompat.Light.Dialog.FixedSize"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:elevation="10dp"
+        android:backgroundTint="#fff533"
+        android:background="@drawable/toast_actionsheet_single_normal"
+        android:layout_marginBottom="90dp"
+        android:textSize="10sp"
+        android:textStyle="normal|bold"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:elevation="0dp" />
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="516px"
+        android:layout_height="180px"
+        android:background="@drawable/mata400"
+        android:layout_centerHorizontal="true"></LinearLayout>
 
 </RelativeLayout>
